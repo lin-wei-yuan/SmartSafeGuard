@@ -38,7 +38,8 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CLoginDlg)
-	afx_msg void OnVerify();
+	
+	int OnVerify();
 	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
 	afx_msg void OnBtnok();

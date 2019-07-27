@@ -103,7 +103,7 @@ protected:
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	DECLARE_EVENTSINK_MAP()
 	//}}AFX_MSG
-	afx_msg void OnCarRunAway(WPARAM wParam,LPARAM lParam);
+	afx_msg  LRESULT OnCarRunAway(WPARAM wParam,LPARAM lParam);// void ¸Ä lresult
 	DECLARE_MESSAGE_MAP()
 	
 private:
@@ -126,3 +126,4 @@ private:
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_WISDOMWELLSERVERDLG_H__D3354C59_76AE_409B_AA15_BF433846BF11__INCLUDED_)
+

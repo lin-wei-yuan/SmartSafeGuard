@@ -64,6 +64,7 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CSettingDlg)
+	
 	afx_msg void OnBtnOk();
 	afx_msg void OnBtnCancel();
 	afx_msg void OnTimer(UINT nIDEvent);

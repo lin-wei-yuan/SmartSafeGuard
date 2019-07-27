@@ -41,7 +41,7 @@ void CLoginDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CLoginDlg, CDialog)
 	//{{AFX_MSG_MAP(CLoginDlg)
-	ON_BN_CLICKED(IDC_VERIFY, OnVerify)
+	//ON_BN_CLICKED(IDC_VERIFY, OnVerify)
 	ON_WM_PAINT()
 	ON_BN_CLICKED(IDC_BTNOK, OnBtnok)
 	ON_BN_CLICKED(IDC_BTNCANCEL, OnBtncancel)
@@ -51,17 +51,17 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // CLoginDlg message handlers
 
-void CLoginDlg::OnVerify() 
-{
-	// TODO: Add your control notification handler code here
-	
-	m_szCode[0] = m_szSelCode[rand() % m_iLength];
-	m_szCode[1] = m_szSelCode[rand() % m_iLength];
-	m_szCode[2] = m_szSelCode[rand() % m_iLength];
-	m_szCode[3] = m_szSelCode[rand() % m_iLength];
-	m_szCode[4] = 0;
-	Invalidate();
-}
+//void CLoginDlg::OnVerify() 
+//{
+//	// TODO: Add your control notification handler code here
+//	
+//	m_szCode[0] = m_szSelCode[rand() % m_iLength];
+//	m_szCode[1] = m_szSelCode[rand() % m_iLength];
+//	m_szCode[2] = m_szSelCode[rand() % m_iLength];
+//	m_szCode[3] = m_szSelCode[rand() % m_iLength];
+//	m_szCode[4] = 0;
+//	Invalidate();
+//}
 
 BOOL CLoginDlg::OnInitDialog() 
 {
@@ -143,7 +143,7 @@ void CLoginDlg::OnBtnok()
 		{
 
 			MessageBox("用户名不存在或密码错误");
-			OnVerify();
+			//OnVerify();
 		}
 		else
 		{
@@ -153,7 +153,7 @@ void CLoginDlg::OnBtnok()
 			if(row == NULL)
 			{
 				MessageBox("用户名不存在或密码错误");
-				OnVerify();
+				//OnVerify();
 				return ;
 			}
 			//MessageBox(row[0]);
@@ -163,7 +163,7 @@ void CLoginDlg::OnBtnok()
 	else
 	{
 		MessageBox("验证码不正确");
-		OnVerify();
+		//OnVerify();
 	}
 	//-chang 7.21--------参数设定！！！-------------
 }

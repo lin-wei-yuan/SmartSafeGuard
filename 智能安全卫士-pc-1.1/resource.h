@@ -137,6 +137,7 @@
 #define IDC_STATIC_1                    1088
 #define IDC_STATIC_2                    1089
 #define IDC_STATIC_3                    1090
+#define IDC_MSCOMM1                     1091
 #define IDM_MODIFY_PASSWD               32773
 #define IDM_PARAM_SETTING               32774
 #define IDM_ABOUT                       32776
@@ -149,9 +150,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        154
+#define _APS_NEXT_RESOURCE_VALUE        155
 #define _APS_NEXT_COMMAND_VALUE         32781
-#define _APS_NEXT_CONTROL_VALUE         1091
+#define _APS_NEXT_CONTROL_VALUE         1092
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

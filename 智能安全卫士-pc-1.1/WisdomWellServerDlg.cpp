@@ -151,7 +151,7 @@ BEGIN_MESSAGE_MAP(CWisdomWellServerDlg, CDialog)
 	ON_COMMAND(IDM_ABOUT, OnAbout)
 	ON_WM_CTLCOLOR()
 	//}}AFX_MSG_MAP
-	ON_MESSAGE(UM_CAR_RUN_AWAY, OnCarRunAway)
+	ON_MESSAGE(UM_CAR_RUN_AWAY, OnCarRunAway)// void 改 lresult
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -857,7 +857,7 @@ void CWisdomWellServerDlg::SetCarStatus(int pos, float v,int dir ,int w)
 	@param lParam:附加参数,未用    FF 02  --待OK!!!
 */
 
-void CWisdomWellServerDlg::OnCarRunAway(WPARAM wParam,LPARAM lParam)
+LRESULT CWisdomWellServerDlg::OnCarRunAway(WPARAM wParam,LPARAM lParam)
 {
 	CModel m("log");
 
@@ -866,7 +866,7 @@ void CWisdomWellServerDlg::OnCarRunAway(WPARAM wParam,LPARAM lParam)
 	sprintf(data,"null,'矿车发生跑车','关闭安全门，停止卷扬机，报警',%d,%d",wParam,uTime.GetUnixTime());
 	m.Insert(data);
 	//	MessageBox("啊，跑车了");
-	
+	return 0;
 }
 /** 井上RFID触发   8650110-5
 	@param rfidNum:射频卡ID号    02 06 00 01 05 01     ->255 255 255 ------?ok

@@ -1,0 +1,22 @@
+---- password Matches (4 in 3 files) ----
+DataDispatch.cpp:277
+	CString passwd = mgr.GetConfigItem("Password");//mgr.GetConfigItem("password");//m_strPassword
+    //CString passwd = m_dlgMain->m_confMgr.GetConfigItem(CString("Password"));
+
+LoginDlg.cpp:139
+		sprintf(where,"username='%s' and password='%s'",m_strUserName,m_strPassword);
+
+		res = user.Where(where).Select();
+ModifyDlg.cpp:51
+	CString password;
+	CString surepassword;
+	GetDlgItemText(IDC_NEWUSERNAME,username);
+	GetDlgItemText(IDC_NEWPASSWORD,password);
+	GetDlgItemText(IDC_SUREPASSWORD,surepassword);
+	char sql[255];
+ModifyDlg.cpp:60
+	if(password.Compare(surepassword) == 0)
+	{
+		sprintf(sql,"UPDATE user SET username='%s',password='%s' WHERE 1=1",username,password);
+		if(user.Fetch(sql) > 0)
+		{

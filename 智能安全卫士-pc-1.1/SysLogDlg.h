@@ -53,6 +53,7 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CSysLogDlg)
 	virtual BOOL OnInitDialog();
+	
 	afx_msg void OnBtnsearch();
 	afx_msg void OnClickLstsyslog(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnItemchangedLstsyslog(NMHDR* pNMHDR, LRESULT* pResult);
